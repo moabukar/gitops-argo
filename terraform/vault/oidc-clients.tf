@@ -8,7 +8,7 @@ module "argo" {
   app_name               = "argo"
   oidc_provider_key_name = vault_identity_oidc_key.key.name
   redirect_uris = [
-    "https://argo.kubefirst.dev/oauth2/callback",
+    "https://argo.test.dev/oauth2/callback",
   ]
   secret_mount_path = vault_mount.secret.path
 }
@@ -23,7 +23,7 @@ module "argocd" {
   app_name               = "argocd"
   oidc_provider_key_name = vault_identity_oidc_key.key.name
   redirect_uris = [
-    "https://argocd.kubefirst.dev/auth/callback",
+    "https://argocd.test.dev/auth/callback",
   ]
   secret_mount_path = vault_mount.secret.path
 }
@@ -38,7 +38,7 @@ module "gitlab" {
   app_name               = "gitlab"
   oidc_provider_key_name = vault_identity_oidc_key.key.name
   redirect_uris = [
-    "https://gitlab.kubefirst.dev/users/auth/openid_connect/callback",
+    "https://gitlab.test.dev/users/auth/openid_connect/callback",
   ]
   secret_mount_path = vault_mount.secret.path
 }
@@ -53,7 +53,7 @@ module "console" {
   app_name               = "console"
   oidc_provider_key_name = vault_identity_oidc_key.key.name
   redirect_uris = [
-    "https://kubefirst.kubefirst.dev/api/auth/callback/vault",
+    "https://kubefirst.test.dev/api/auth/callback/vault",
   ]
   secret_mount_path = vault_mount.secret.path
 }

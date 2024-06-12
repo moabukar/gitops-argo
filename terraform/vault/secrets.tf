@@ -4,7 +4,7 @@ resource "vault_generic_secret" "atlantis_ngrok_secrets" {
   data_json = jsonencode(
     {
       GIT_PROVIDER    = "github",
-      GIT_OWNER       = "moabukar-dev",
+      GIT_OWNER       = "moabukar",
       GIT_TOKEN       = var.github_token,
       GIT_REPOSITORY  = "gitops",
       NGROK_AUTHTOKEN = var.ngrok_authtoken,
@@ -41,7 +41,7 @@ resource "vault_generic_secret" "crossplane" {
       VAULT_ADDR            = "http://vault.vault.svc.cluster.local:8200"
       VAULT_TOKEN           = var.vault_token
       password              = var.github_token
-      username              = "moabukar-dev"
+      username              = "moabukar"
     }
   )
 }
@@ -124,9 +124,9 @@ resource "vault_generic_secret" "atlantis_secrets" {
       ARGO_SERVER_URL                     = "argo.argo.svc.cluster.local:2746",
       ATLANTIS_GH_HOSTNAME                = "github.com",
       ATLANTIS_GH_TOKEN                   = var.github_token,
-      ATLANTIS_GH_USER                    = "moabukar-dev",
+      ATLANTIS_GH_USER                    = "moabukar",
       ATLANTIS_GH_WEBHOOK_SECRET          = var.atlantis_repo_webhook_secret,
-      GITHUB_OWNER                        = "moabukar-dev",
+      GITHUB_OWNER                        = "moabukar",
       GITHUB_TOKEN                        = var.github_token,
       TF_VAR_atlantis_repo_webhook_secret = var.atlantis_repo_webhook_secret,
       TF_VAR_aws_access_key_id            = var.aws_access_key_id,

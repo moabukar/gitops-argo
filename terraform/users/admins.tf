@@ -23,8 +23,8 @@ module "kbot" {
 
   acl_policies      = ["admin"]
   email             = "kbot-email@your-company.io"
-  first_name        = "Kubefirst"
-  github_username   = "moabukar-dev"
+  first_name        = "mo"
+  github_username   = "moabukar"
   last_name         = "Bot"
   initial_password  = var.initial_password
   username          = "kbot"

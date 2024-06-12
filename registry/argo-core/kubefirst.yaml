@@ -9,11 +9,11 @@ spec:
   project: default
   source:
     repoURL: git@github.com:moabukar/gitops-argo.git
-    path: registry/argo-core/components/argo-core
+    path: registry/argo-core/components/kubefirst
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
-    namespace: argo-core
+    namespace: kubefirst
   syncPolicy:
     automated:
       prune: true
